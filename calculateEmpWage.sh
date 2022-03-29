@@ -1,11 +1,16 @@
 #!/bin/bash -x
 
 PRESENT=1;
+WAGE_PER_HOUR=20;
+
 isPresent=$((RANDOM%2));
 
 if [ $isPresent -eq $PRESENT ]
 then
-	echo "Employee is present."$present;
+	WorkingHour=8;
 else
-	echo "Employee is absent."$absent;
+	WorkingHour=0;
 fi
+Wage=$((WAGE_PER_HOUR*workingHour));
+
+echo "Employee wage : $"$wage "USD";
