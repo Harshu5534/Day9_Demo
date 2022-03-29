@@ -6,16 +6,24 @@ WAGE_PER_HOUR=20;
 
 isPresent=$((RANDOM%3));
 
-if [ $isPresent -eq $PRESENT ]
-then
-	WorkingHour=8;
+case $isPresent in
 
-elif [ $isPresent -eq $PART_TIME ]
-then
-	WorkingHour=4;
-else
-	WorkingHour=0;
-fi
-Wage=$((WAGE_PER_HOUR*workingHour));
+	$PRESENT)
+		echo "Employee is Present";
+		WorkingHour=8;
+	;;
 
-echo "Employee wage : $"$wage "USD";
+	$PART_TIME)
+		echo "Employee is working part time";
+		WorkingHour=4;
+	;;
+
+	*)
+		echo "Employee is absent";
+		WorkingHour=0;
+	;;
+esac;
+
+dailyWage=$((WAGE_PER_HOUR*workingHour));
+
+echo "Employee daily Wage : $"$dailyWage "USD";
