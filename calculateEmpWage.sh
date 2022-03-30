@@ -28,8 +28,9 @@ do
 		;;
 	esac;
 
-	dailyWage=$((WAGE_PER_HOUR*workingHour));
+	dailyWage=$((WAGE_PER_HOUR*WorkingHour));
 	TotalSalary=$((TotalSalary+dailyWage));
 done
 
 echo "Employee monthly Wage : $"$TotalSalary "USD";
+
