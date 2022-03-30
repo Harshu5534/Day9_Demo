@@ -2,7 +2,7 @@
 
 PRESENT=1;
 PART_TIME=2;
-WAGE_PER_HOUR=20;
+WAGE_PER_HOUR=100;
 MAX_WORKING_DAY=20;
 
 TotalSalary=0;
@@ -13,23 +13,24 @@ do
 	case $isPresent in
 
 		$PRESENT)
-			echo "Employee is Present";
-			WorkingHour=8;
+			#echo "Employee is Present";
+			workingHour=8;
 		;;
 
 		$PART_TIME)
-			echo "Employee is working part time";
-			WorkingHour=4;
+			#echo "Employee is working part time";
+			workingHour=4;
 		;;
 
 		*)
-			echo "Employee is absent";
-			WorkingHour=0;
+			#echo "Employee is absent";
+			workingHour=0;
 		;;
 	esac;
 
-	dailyWage=$((WAGE_PER_HOUR*workingHour));
-	TotalSalary=$((TotalSalary+dailyWage));
+	dailyWage=$(( workingHour * WAGE_PER_HOUR ));
+	TotalSalary=$(( TotalSalary + dailyWage));
 done
 
-echo "Employee monthly Wage : $"$TotalSalary "USD";
+echo "Employee Monthly Wage : $"$TotalSalary "USD";
+
