@@ -16,6 +16,6 @@ then
 else
 	WorkingHour=0;
 fi
-Wage=$((WAGE_PER_HOUR*workingHour));
+Wage=$((WAGE_PER_HOUR*WorkingHour));
 
-echo "Employee wage : $"$wage "USD";
+echo "Employee wage : $"$Wage "USD";
