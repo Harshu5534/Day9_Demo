@@ -24,6 +24,6 @@ case $isPresent in
 	;;
 esac;
 
-dailyWage=$((WAGE_PER_HOUR*workingHour));
+dailyWage=$((WAGE_PER_HOUR*WorkingHour));
 
 echo "Employee daily Wage : $"$dailyWage "USD";
